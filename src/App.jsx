@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TrustSection from "./components/TrustSection";
 import NatureSlider from "./components/NatureSlider";
+import GetConnectedSection from "./components/GetConnectedSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HeroSection />
       <TrustSection />
       <NatureSlider />
+      <GetConnectedSection />
     </>
   );
 }

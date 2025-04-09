@@ -7,7 +7,7 @@ import storyAvatar from "../assets/avatar.jpg";
 import liveBadge from "../assets/live.svg";
 import plane from "../assets/plane.svg";
 import cloud from "../assets/cloud.svg";
-import dots from "../assets/star.svg";
+import stars from "../assets/star.svg";
 import balloon from "../assets/balloon.svg";
 import compass from "../assets/compass.svg";
 import wave from "../assets/wave.svg";
@@ -69,7 +69,7 @@ function HeroSection() {
       />
       <Box
         component="img"
-        src={dots}
+        src={stars}
         alt="Stars"
         sx={{
           position: "absolute",

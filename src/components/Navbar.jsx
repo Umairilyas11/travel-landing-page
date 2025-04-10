@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import StarLogo from "./StarLogo";
+import StarLogo from "./icons/StarLogo";
 
 const Navbar = () => {
   const menuItems = ["Reviews", "Destinations", "Tickets", "Blog"];

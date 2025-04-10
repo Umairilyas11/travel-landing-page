@@ -55,6 +55,7 @@ function NatureSlider() {
         position: "relative",
         maxWidth: "1280px",
         mx: "auto",
+        overflow: "hidden",
         px: 2,
       }}
     >
@@ -189,7 +190,7 @@ function NatureSlider() {
             alt="bus"
             sx={{
               position: "absolute",
-              right: -60,
+              right: -20,
               top: "-25px",
               width: 50,
               transform: "scaleX(-1)",

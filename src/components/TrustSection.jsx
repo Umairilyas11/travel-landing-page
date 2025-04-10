@@ -19,7 +19,6 @@ function TrustSection() {
         position: "relative",
         maxWidth: "1280px",
         mx: "auto",
-        px: 2,
         overflow: "hidden",
       }}
     >
@@ -31,7 +30,7 @@ function TrustSection() {
           position: "absolute",
           width: 50,
           bottom: "30%",
-          left: 0,
+          left: -10,
           zIndex: 1,
         }}
       />

@@ -20,7 +20,7 @@ function HeroSection() {
         position: "relative",
         maxWidth: "1280px",
         mx: "auto",
-        px: 2,
+        overflow: "hidden",
       }}
     >
       <Box
@@ -97,7 +97,7 @@ function HeroSection() {
         sx={{
           position: "absolute",
           top: 400,
-          left: 1300,
+          right: -15,
           width: 50,
         }}
       />

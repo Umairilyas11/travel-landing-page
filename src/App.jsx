@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import TrustSection from "./components/TrustSection";
 import NatureSlider from "./components/NatureSlider";
 import GetConnectedSection from "./components/GetConnectedSection";
+import DealsSections from "./components/DealsSections";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <TrustSection />
       <NatureSlider />
       <GetConnectedSection />
+      <DealsSections />
     </>
   );
 }

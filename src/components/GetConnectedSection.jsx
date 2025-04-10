@@ -24,7 +24,9 @@ function GetConnectedSection() {
         position: "relative",
         maxWidth: "1280px",
         mx: "auto",
+        overflow: "hidden",
         px: 2,
+        pb: 10,
       }}
     >
       <Box
@@ -56,7 +58,7 @@ function GetConnectedSection() {
         sx={{
           position: "absolute",
           bottom: "50%",
-          right: 0,
+          right: -10,
           width: 50,
         }}
       />
@@ -65,7 +67,7 @@ function GetConnectedSection() {
           position: "absolute",
           width: 80,
           height: 80,
-          bottom: 50,
+          bottom: 120,
           left: 130,
           borderRadius: "50%",
           backgroundColor: "#26D080", // lime green

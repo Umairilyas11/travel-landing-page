@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import StarLogo from "./icons/StarLogo";
+import StarLogo from "../assets/star.svg?react";
 
 const Navbar = () => {
   const menuItems = ["Reviews", "Destinations", "Tickets", "Blog"];
@@ -30,7 +30,7 @@ const Navbar = () => {
         <Toolbar sx={{ justifyContent: "space-between", px: 4, py: 1.5 }}>
           <Box display="flex" alignItems="center" gap={3}>
             <Box display="flex" alignItems="center" gap={1}>
-              <StarLogo />
+              <StarLogo style={{ height: "35" }} />
 
               <Typography variant="h6" fontWeight={700}>
                 Kanra

@@ -63,8 +63,6 @@ function TestimonialSection() {
         maxWidth: "1280px",
         mx: "auto",
         overflow: "hidden",
-        // pt: 15,
-        // pb: 15,
       }}
     >
       <Box
@@ -331,8 +329,6 @@ function TestimonialSection() {
           backgroundColor: "#e5e7eb",
 
           mx: "auto",
-
-          mb: 5,
         }}
       />
     </Box>

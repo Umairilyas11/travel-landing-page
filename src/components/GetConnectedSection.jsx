@@ -9,8 +9,8 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { TbSnowman } from "react-icons/tb";
 import Balloon from "../assets/balloon.svg";
 import cloud from "../assets/cloud.svg";
-import stars from "../assets/star.svg";
-import wave from "../assets/wave.svg";
+import WaveIcon from "../assets/wave.svg?react";
+import Star from "../assets/starCollection.svg?react";
 
 const moroccoImg =
   "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -51,15 +51,13 @@ function GetConnectedSection() {
           width: 50,
         }}
       />
-      <Box
-        component="img"
-        src={wave}
-        alt="wave"
-        sx={{
+      <WaveIcon
+        style={{
           position: "absolute",
           bottom: "50%",
           right: -10,
           width: 50,
+          fill: "#F3BA24",
         }}
       />
       <Box
@@ -74,16 +72,14 @@ function GetConnectedSection() {
           boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
         }}
       />
-      <Box
-        component="img"
-        src={stars}
-        alt="Stars"
-        sx={{
+      <Star
+        style={{
           position: "absolute",
           top: 150,
           left: 120,
           width: 100,
           transform: "rotate(-10deg)",
+          fill: "#FF5722",
         }}
       />
       <Box

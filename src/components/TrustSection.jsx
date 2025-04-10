@@ -8,9 +8,8 @@ import girlWithPassport from "../assets/girl-with-passport.png";
 import cloud from "../assets/cloud.svg";
 import realCloud from "../assets/real-cloud.png";
 import realPlane from "../assets/real-plane.png";
-import wave from "../assets/wave-white.svg";
+import WaveIcon from "../assets/wave.svg?react";
 import car from "../assets/car.svg";
-import wave2 from "../assets/wave-orange.svg";
 
 function TrustSection() {
   return (
@@ -22,16 +21,14 @@ function TrustSection() {
         overflow: "hidden",
       }}
     >
-      <Box
-        component="img"
-        src={wave2}
-        alt="wave"
-        sx={{
+      <WaveIcon
+        style={{
           position: "absolute",
           width: 50,
           bottom: "30%",
           left: -10,
           zIndex: 1,
+          fill: "#F3BA24",
         }}
       />
       <Box
@@ -249,11 +246,8 @@ function TrustSection() {
                 position: "relative",
               }}
             />
-            <Box
-              component="img"
-              src={wave}
-              alt="wave"
-              sx={{
+            <WaveIcon
+              style={{
                 position: "absolute",
                 top: "55%",
                 left: "50%",
@@ -265,6 +259,7 @@ function TrustSection() {
                   "linear-gradient(to left, black 10%, transparent 100%)",
                 maskRepeat: "no-repeat",
                 maskSize: "100% 100%",
+                fill: "#fff",
               }}
             />
             <Box

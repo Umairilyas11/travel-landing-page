@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
@@ -7,11 +7,10 @@ import storyAvatar from "../assets/avatar.jpg";
 import liveBadge from "../assets/live.svg";
 import plane from "../assets/plane.svg";
 import cloud from "../assets/cloud.svg";
-import stars from "../assets/star.svg";
+import Star from "../assets/starCollection.svg?react";
 import balloon from "../assets/balloon.svg";
 import compass from "../assets/compass.svg";
-import wave from "../assets/wave.svg";
-import WaterOutlinedIcon from "@mui/icons-material/WaterOutlined";
+import WaveIcon from "../assets/wave.svg?react";
 
 function HeroSection() {
   return (
@@ -67,16 +66,14 @@ function HeroSection() {
           width: 50,
         }}
       />
-      <Box
-        component="img"
-        src={stars}
-        alt="Stars"
-        sx={{
+      <Star
+        style={{
           position: "absolute",
           top: 250,
           left: "55%",
           width: 100,
           transform: "rotate(7deg)",
+          fill: "#FF5722",
         }}
       />
       <Box
@@ -90,15 +87,13 @@ function HeroSection() {
           width: 130,
         }}
       />
-      <Box
-        component="img"
-        src={wave}
-        alt="wave"
-        sx={{
+      <WaveIcon
+        style={{
           position: "absolute",
           top: 400,
           right: -15,
           width: 50,
+          fill: "#F3BA24",
         }}
       />
       <Box
@@ -129,17 +124,18 @@ function HeroSection() {
             }}
           >
             People don't take trips, <br /> trips take people
-            <WaterOutlinedIcon
-              sx={{
-                justifyContent: "center",
-                alignItems: "center",
-                display: "inline-block",
-                marginLeft: 2,
-                color: "blue",
-                fontSize: 50,
-              }}
-            />
           </Typography>
+          <WaveIcon
+            style={{
+              position: "absolute",
+              top: "45%",
+              left: "20%",
+              width: 50,
+              height: "auto",
+              fill: "#1F0E85", // 🎯 Change SVG fill color
+              opacity: 0.8,
+            }}
+          />
 
           <Typography
             variant="body1"

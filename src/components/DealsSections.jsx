@@ -101,8 +101,11 @@ function DealsSections() {
               borderRadius: 2,
               fontWeight: 600,
               textTransform: "none",
+              transition: "all 0.3s ease",
               "&:hover": {
-                bgcolor: "#50d6f4",
+                bgcolor: "#4dd4ec",
+                transform: "translateY(-2px)",
+                boxShadow: "0 6px 12px rgba(0, 0, 0, 0.2)",
               },
               mb: 2,
             }}

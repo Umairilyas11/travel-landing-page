@@ -25,7 +25,7 @@ function InfoSection() {
     >
       <WaveIcon
         style={{
-          fill: "#FF5722",
+          color: "#FF5722",
           position: "absolute",
           maxWidth: "50",
           zIndex: 1,
@@ -35,7 +35,7 @@ function InfoSection() {
       />
       <WaveIcon
         style={{
-          fill: "#0A1F7E",
+          color: "#0A1F7E",
           position: "absolute",
           maxWidth: "50",
           zIndex: 1,
@@ -55,7 +55,7 @@ function InfoSection() {
       >
         <Star
           style={{
-            fill: "#654419",
+            color: "#654419",
             position: "absolute",
             maxWidth: "100",
             left: "90",
@@ -64,7 +64,7 @@ function InfoSection() {
         />
         <WaveIcon
           style={{
-            fill: "#fff",
+            color: "#fff",
             position: "absolute",
             maxWidth: "50",
             right: "-10",

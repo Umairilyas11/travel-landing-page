@@ -28,7 +28,7 @@ function TrustSection() {
           bottom: "30%",
           left: -10,
           zIndex: 1,
-          fill: "#F3BA24",
+          color: "#F3BA24",
         }}
       />
       <Box
@@ -259,7 +259,7 @@ function TrustSection() {
                   "linear-gradient(to left, black 10%, transparent 100%)",
                 maskRepeat: "no-repeat",
                 maskSize: "100% 100%",
-                fill: "#fff",
+                color: "#fff",
               }}
             />
             <Box

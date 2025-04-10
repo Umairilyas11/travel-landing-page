@@ -57,7 +57,7 @@ function GetConnectedSection() {
           bottom: "50%",
           right: -10,
           width: 50,
-          fill: "#F3BA24",
+          color: "#F3BA24",
         }}
       />
       <Box
@@ -79,7 +79,7 @@ function GetConnectedSection() {
           left: 120,
           width: 100,
           transform: "rotate(-10deg)",
-          fill: "#FF5722",
+          color: "#FF5722",
         }}
       />
       <Box
@@ -318,7 +318,6 @@ function GetConnectedSection() {
                 height: "auto",
                 cursor: "pointer",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                cursor: "pointer",
                 "&:hover": {
                   transform: "scale(1.05)",
                   boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
@@ -334,7 +333,7 @@ function GetConnectedSection() {
                 height: "auto",
                 cursor: "pointer",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                cursor: "pointer",
+
                 "&:hover": {
                   transform: "scale(1.05)",
                   boxShadow: "0 4px 15px rgba(0,0,0,0.2)",

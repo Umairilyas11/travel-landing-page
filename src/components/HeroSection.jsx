@@ -73,7 +73,7 @@ function HeroSection() {
           left: "55%",
           width: 100,
           transform: "rotate(7deg)",
-          fill: "#FF5722",
+          color: "#FF5722",
         }}
       />
       <Box
@@ -93,7 +93,7 @@ function HeroSection() {
           top: 400,
           right: -15,
           width: 50,
-          fill: "#F3BA24",
+          color: "#F3BA24",
         }}
       />
       <Box
@@ -132,7 +132,7 @@ function HeroSection() {
               left: "20%",
               width: 50,
               height: "auto",
-              fill: "#1F0E85", // 🎯 Change SVG fill color
+              color: "#1F0E85",
               opacity: 0.8,
             }}
           />

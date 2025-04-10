@@ -20,6 +20,9 @@ function HeroSection() {
         maxWidth: "1280px",
         mx: "auto",
         overflow: "hidden",
+        px: { xs: 2, md: 4 },
+        pt: { xs: 6, md: 10 },
+        pb: { xs: 25, md: 20 },
       }}
     >
       <Box
@@ -28,8 +31,8 @@ function HeroSection() {
         alt="Plane"
         sx={{
           position: "absolute",
-          top: 40,
-          right: 60,
+          top: { xs: 20, md: 40 },
+          right: { xs: 30, md: 60 },
           width: 40,
         }}
       />
@@ -39,8 +42,8 @@ function HeroSection() {
         alt="Balloon"
         sx={{
           position: "absolute",
-          top: 20,
-          left: "50%",
+          top: { xs: 70, md: 20 },
+          left: { xs: "5%", md: "50%" },
           width: 70,
         }}
       />
@@ -66,31 +69,33 @@ function HeroSection() {
           width: 50,
         }}
       />
-      <Star
-        style={{
+      <Box
+        sx={{
+          top: { xs: "60%", sm: 500, md: 250 },
+          left: { xs: "10%", sm: "27%", md: "58%" },
           position: "absolute",
-          top: 250,
-          left: "55%",
           width: 100,
           transform: "rotate(7deg)",
           color: "#FF5722",
         }}
-      />
+      >
+        <Star />
+      </Box>
       <Box
         component="img"
         src={compass}
         alt="compass"
         sx={{
           position: "absolute",
-          top: 450,
-          left: "80%",
+          top: { xs: "85%", md: 450 },
+          left: { xs: "65%", md: "80%" },
           width: 130,
         }}
       />
       <WaveIcon
         style={{
           position: "absolute",
-          top: 400,
+          top: 300,
           right: -15,
           width: 50,
           color: "#F3BA24",
@@ -99,57 +104,68 @@ function HeroSection() {
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          py: { xs: 6, md: 10 },
-          px: { xs: 2, md: 10 },
           flexDirection: { xs: "column", md: "row" },
-          bgColor: "#fff",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: { xs: 6, md: 10 },
         }}
       >
         <Box
           sx={{
             flex: 1,
-            maxWidth: 600,
+            textAlign: { xs: "center", md: "left" },
           }}
         >
           <Typography
             variant="h3"
             fontWeight={700}
             sx={{
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
               mb: 3,
+              maxWidth: "60%",
               color: "#0A0A23",
               lineHeight: 1.2,
-              maxWidth: 350,
+              mx: { xs: "auto", md: 0 },
             }}
           >
-            People don't take trips, <br /> trips take people
+            People don't take trips, trips <br /> take people
           </Typography>
-          <WaveIcon
-            style={{
-              position: "absolute",
-              top: "45%",
-              left: "20%",
-              width: 50,
-              height: "auto",
-              color: "#1F0E85",
-              opacity: 0.8,
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
             }}
-          />
-
+          >
+            <WaveIcon
+              style={{
+                position: "absolute",
+                top: "35%",
+                left: "23%",
+                width: 50,
+                height: "auto",
+                color: "#1F0E85",
+                opacity: 0.8,
+              }}
+            />
+          </Box>
           <Typography
             variant="body1"
             sx={{
-              color: "4f4f4f",
-              md: 4,
+              color: "#4f4f4f",
+              fontSize: { xs: "14px", md: "16px" },
               maxWidth: 400,
-              paddingBottom: 5,
+              mx: { xs: "auto", md: 0 },
+              mb: 4,
             }}
           >
             To get the best of your advanture you need to leave and go where you
             like. We are waiting for you!
           </Typography>
-          <Stack direction="row" spacing={3} alignItems="center">
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={3}
+            alignItems="center"
+            justifyContent={{ xs: "center", md: "flex-start" }}
+          >
             <Button
               variant="contained"
               sx={{
@@ -247,13 +263,12 @@ function HeroSection() {
             justifyContent: "center",
             alignItems: "flex-end",
             position: "relative",
-            mt: { xs: 8, md: 0 },
           }}
         >
           <Box
             sx={{
-              width: 300,
-              height: 300,
+              width: { xs: 250, sm: 300, md: 340 },
+              height: { xs: 250, sm: 300, md: 340 },
               backgroundColor: "#A8E6FF",
               borderRadius: 4,
               position: "relative",
@@ -275,16 +290,16 @@ function HeroSection() {
             <Box
               sx={{
                 position: "absolute",
-                right: "-70px",
+                right: { xs: "-50px", md: "-70px" },
                 top: "20%",
                 backgroundColor: "#fff",
                 borderRadius: 2,
-                padding: "16px",
+                padding: "12px",
                 boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                width: 90,
+                width: 80,
               }}
             >
               <Box
@@ -296,11 +311,16 @@ function HeroSection() {
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                sx={{ fontSize: "18px" }}
+                sx={{ fontSize: "16px" }}
               >
                 24/7
               </Typography>
-              <Typography variant="caption" color="text.secondary">
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                textAlign="center"
+                sx={{ fontSize: "11px" }}
+              >
                 Guide Support
               </Typography>
             </Box>

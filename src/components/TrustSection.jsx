@@ -18,6 +18,8 @@ function TrustSection() {
         position: "relative",
         maxWidth: "1280px",
         mx: "auto",
+        px: { xs: 2, md: 0 },
+        py: { xs: 6, md: 10 },
         overflow: "hidden",
       }}
     >
@@ -37,7 +39,7 @@ function TrustSection() {
         alt="car"
         sx={{
           position: "absolute",
-          top: 130,
+          top: 210,
           left: "65%",
           width: 40,
           zIndex: 1,
@@ -116,7 +118,11 @@ function TrustSection() {
             mb: 2,
           }}
         >
-          <Typography fontWeight="bold" fontSize={18} textAlign={"left"}>
+          <Typography
+            fontWeight="bold"
+            fontSize={{ xs: 16, sm: 18 }}
+            textAlign={"left"}
+          >
             Travelled more than <br />
             2000 places 🌍
           </Typography>
@@ -127,7 +133,7 @@ function TrustSection() {
           position: "relative",
           bgcolor: "#0a1f7e",
           color: "white",
-          px: { xs: 2, md: 7 },
+          px: { xs: 3, md: 7 },
           borderRadius: "40px",
         }}
       >
@@ -138,21 +144,23 @@ function TrustSection() {
             alignItems: "center",
             justifyContent: "space-between",
             flexDirection: { xs: "column", md: "row" },
+            gap: { xs: 6, md: 0 },
             mt: 5,
           }}
         >
           <Box
             sx={{
               position: "relative",
-              width: 280,
+              width: { xs: 500, sm: 280 },
               flexShrink: 0,
+              mt: { xs: 10, md: 0 },
             }}
           >
             <Box
               sx={{
                 position: "relative",
-                width: 300,
-                height: 200,
+                width: { xs: 250, md: 300 },
+                height: { xs: 160, sm: 200 },
                 backgroundColor: "#a8e6ff",
                 borderRadius: "20px",
                 flexShrink: 0,
@@ -160,6 +168,7 @@ function TrustSection() {
                 alignItems: "flex-end",
                 justifyContent: "center",
                 ml: 4,
+                mx: "auto",
               }}
             ></Box>
             <Box
@@ -168,9 +177,11 @@ function TrustSection() {
               alt="Traveller Yellow"
               sx={{
                 position: "absolute",
-                top: -140,
-                width: "120%",
+                top: { xs: -140, sm: -140, md: -135 },
+                width: { xs: "60%", sm: "120%", md: "120%" },
+                left: { xs: 100, sm: 0 },
                 zIndex: 1,
+                mx: "auto",
               }}
             />
             <Box
@@ -180,8 +191,8 @@ function TrustSection() {
               sx={{
                 position: "absolute",
                 bottom: -80,
-                left: "5%",
-                width: 300,
+                left: { xs: 100, sm: "5%" },
+                width: { xs: 300, sm: 300 },
                 zIndex: 2,
               }}
             />
@@ -189,7 +200,7 @@ function TrustSection() {
               sx={{
                 position: "absolute",
                 bottom: -10,
-                left: 10,
+                left: { xs: 100, sm: -10, md: -20 },
                 width: 50,
                 height: 50,
                 borderRadius: "50%",
@@ -200,8 +211,8 @@ function TrustSection() {
                 zIndex: 3,
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
                 border: "4px solid white",
-                transition: "all 0.3s ease-in-out", // Smooth animation
-                cursor: "pointer", // Indicates it's interactive
+                transition: "all 0.3s ease-in-out",
+                cursor: "pointer",
                 "&:hover": {
                   transform: "scale(1.1)",
                   boxShadow: "0 6px 16px rgba(255, 87, 34, 0.5)",
@@ -223,7 +234,7 @@ function TrustSection() {
           </Box>
           <Box
             sx={{
-              textAlign: "center",
+              textAlign: { xs: "center", md: "left" },
               maxWidth: 400,
               position: "relative",
             }}
@@ -231,8 +242,12 @@ function TrustSection() {
             <Typography
               variant="h5"
               fontWeight="bold"
-              textAlign="left"
-              sx={{ lineHeight: 1.4, mt: 3 }}
+              sx={{
+                lineHeight: 1.4,
+                mt: 3,
+                fontSize: { xs: "1rem", sm: "1.2rem", lg: "1.5rem" },
+                textAlign: { xs: "center", md: "left" },
+              }}
             >
               Your travel companion that carries all the information
             </Typography>
@@ -241,18 +256,18 @@ function TrustSection() {
               src={realPlane}
               alt="plane"
               sx={{
-                width: 300,
+                width: { xs: 200, sm: 300 },
                 zIndex: 2,
                 position: "relative",
               }}
             />
-            <WaveIcon
-              style={{
+            <Box
+              sx={{
                 position: "absolute",
                 top: "55%",
                 left: "50%",
                 transform: "translateX(-50%)",
-                width: 200,
+                width: { xs: 150, md: 200 },
                 zIndex: 1,
                 opacity: 0.5,
                 maskImage:
@@ -261,7 +276,9 @@ function TrustSection() {
                 maskSize: "100% 100%",
                 color: "#fff",
               }}
-            />
+            >
+              <WaveIcon style={{}} />
+            </Box>
             <Box
               component="img"
               src={realCloud}
@@ -279,8 +296,10 @@ function TrustSection() {
           <Box
             sx={{
               position: "relative",
-              width: 280,
+              width: { xs: "100%", sm: 280 },
               flexShrink: 0,
+              display: "flex",
+              justifyContent: "center",
             }}
           >
             <Box
@@ -288,10 +307,10 @@ function TrustSection() {
               src={girlWithPassport}
               alt="girl with passport"
               sx={{
-                position: "absolute",
-                width: "130%",
-                top: -217,
-                left: -30,
+                position: { xs: "relative", md: "absolute" },
+                width: { xs: "50%", sm: "130%" },
+                top: { xs: 0, md: -217 },
+                left: { xs: 0, md: -30 },
                 zIndex: 2,
               }}
             />

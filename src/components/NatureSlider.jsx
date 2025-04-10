@@ -64,7 +64,12 @@ function NatureSlider() {
         <Typography
           variant="h4"
           fontWeight="bold"
-          sx={{ textAlign: "left", mb: 5 }}
+          sx={{
+            textAlign: { xs: "center", md: "left" },
+            mb: { xs: 3, md: 5 },
+            fontSize: { xs: "1.8rem", sm: "2rem", md: "2.5rem" },
+            lineHeight: 1.3,
+          }}
         >
           Discover the touch of nature 🌈
         </Typography>
@@ -72,10 +77,12 @@ function NatureSlider() {
         {/* Arrows */}
         <Box
           sx={{
-            position: "absolute",
-            top: 100,
-            right: 30,
+            position: { xs: "relative", md: "absolute" },
+            top: { xs: 370, md: 100 },
+            right: { xs: 0, md: 30 },
             display: "flex",
+            mb: { xs: 3, md: 0 },
+            justifyContent: "center",
             gap: 2,
             zIndex: 2,
           }}
@@ -178,7 +185,7 @@ function NatureSlider() {
         {/* bottom line*/}
         <Box
           sx={{
-            mt: 3,
+            mt: { xs: 8, md: 3 },
             mb: 5,
             borderBottom: "3px solid #eee",
             position: "relative",

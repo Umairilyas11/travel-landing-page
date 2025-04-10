@@ -27,11 +27,29 @@ const Navbar = () => {
         elevation={0}
         sx={{ bgcolor: "white", color: "#0A0A23" }}
       >
-        <Toolbar sx={{ justifyContent: "space-between", px: 4, py: 1.5 }}>
-          <Box display="flex" alignItems="center" gap={3}>
-            <Box display="flex" alignItems="center" gap={1}>
+        <Toolbar
+          sx={{
+            justifyContent: "space-between",
+            px: { xs: 2, md: 4 },
+            py: { xs: 1, md: 1.5 },
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: { xs: "flex-start", md: "center" },
+            gap: { xs: 2, md: 0 },
+          }}
+        >
+          {/* Logo + Search */}
+          <Box
+            display="flex"
+            alignItems="center"
+            gap={3}
+            sx={{
+              width: "100%",
+              justifyContent: { xs: "space-between", md: "flex-start" },
+              flexWrap: "wrap",
+            }}
+          >
+            <Box display="flex" alignItems="center" gap={1} mx="auto">
               <StarLogo style={{ height: "35" }} />
-
               <Typography variant="h6" fontWeight={700}>
                 Kanra
               </Typography>
@@ -44,16 +62,32 @@ const Navbar = () => {
                 px: 2,
                 py: 0.5,
                 borderRadius: 2,
-                minWidth: 250,
+                minWidth: { xs: "100%", md: 150 },
+                flex: 1,
                 boxShadow: "0px 1px 3px rgba(0,0,0,0.05)",
               }}
               gap={2}
             >
               <SearchIcon sx={{ color: "orangered" }} />
-              <InputBase placeholder="Search destinations.." fullWidth />
+              <InputBase
+                placeholder="Search destinations.."
+                fullWidth
+                sx={{ fontSize: 14 }}
+              />
             </Box>
           </Box>
-          <Box display="flex" alignItems="center" gap={4}>
+
+          {/* Menu Items + Button */}
+          <Box
+            display="flex"
+            alignItems="center"
+            gap={4}
+            sx={{
+              flexWrap: { xs: "wrap", md: "nowrap" },
+              justifyContent: { xs: "center", md: "flex-end" },
+              width: "100%",
+            }}
+          >
             {menuItems.map((item, index) => (
               <Box
                 key={index}
@@ -82,6 +116,7 @@ const Navbar = () => {
                   fontWeight={index === activeIndex ? "bold" : "normal"}
                   sx={{
                     textAlign: "center",
+                    fontSize: { xs: 14, md: 16 },
                   }}
                 >
                   {item}
@@ -109,6 +144,7 @@ const Navbar = () => {
                 px: 3,
                 py: 1,
                 textTransform: "none",
+                fontSize: { xs: 14, md: 16 },
                 boxShadow: "0px 4px 12px rgba(255, 87, 34,0.3)",
                 "&:hover": {
                   bgcolor: "#ff5e33",

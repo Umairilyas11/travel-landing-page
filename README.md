@@ -51,7 +51,7 @@ Your app will run locally at: http://localhost:5173 (or the port provided by Vit
 
 [Framer Motion](https://www.npmjs.com/package/framer-motion)
 
-[Vite] (https://vitejs.dev/)
+[Vite](https://vitejs.dev/)
 
 ## 📁 Project Structure
 

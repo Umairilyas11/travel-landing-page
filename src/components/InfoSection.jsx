@@ -12,15 +12,14 @@ function InfoSection() {
       sx={{
         maxWidth: "1280px",
         mx: "auto",
-        px: 4,
-        py: 8,
+        px: { xs: 2, md: 4 },
+        py: { xs: 6, md: 8 },
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         gap: 4,
-        mt: 10,
         overflow: "hidden",
         position: "relative",
-        pt: 20,
+        pt: { xs: 10, md: 20 },
       }}
     >
       <WaveIcon
@@ -51,17 +50,26 @@ function InfoSection() {
           borderRadius: 4,
           position: "relative",
           overflow: "visible",
+          display: "flex",
+          justifyContent: "left",
+          p: 3,
         }}
       >
-        <Star
-          style={{
-            color: "#654419",
-            position: "absolute",
-            maxWidth: "100",
-            left: "90",
-            top: "60",
+        <Box
+          sx={{
+            display: { xs: "none", md: "block" },
           }}
-        />
+        >
+          <Star
+            style={{
+              color: "#654419",
+              position: "absolute",
+              maxWidth: "100",
+              left: "90",
+              top: "60",
+            }}
+          />
+        </Box>
         <WaveIcon
           style={{
             color: "#fff",
@@ -89,22 +97,25 @@ function InfoSection() {
         {/* Button Container */}
         <Box
           sx={{
-            position: "absolute",
+            position: { xs: "static", md: "absolute" },
             bottom: 30,
             left: 30,
             right: 30,
             bgcolor: "white",
             borderRadius: 2,
-            px: 4,
-            py: 3,
+            height: "auto",
+            px: 3,
+            py: 2,
             display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             justifyContent: "space-between",
             gap: 2,
             boxShadow: 3,
+            zIndex: 1,
           }}
         >
-          <Typography fontWeight={700} fontSize={22}>
+          <Typography fontWeight={700} fontSize={{ xs: 18, md: 22 }}>
             Explore the world <br />
             with us 🌍
           </Typography>
@@ -169,7 +180,15 @@ function InfoCard({ title, description, bg, iconSrc, fullHeight }) {
         justifyContent: "space-between",
         minHeight: 200,
         position: "relative",
-        ...(fullHeight && { gridRow: "span 2" }),
+        transition: "all 0.3s ease",
+        gridRow: fullHeight ? { xs: "auto", md: "span 2" } : "auto",
+        boxShadow: "0px 2px 6px rgba(0,0,0,0.1)",
+        cursor: "pointer",
+
+        "&:hover": {
+          transform: "translateY(-6px) scale(1.02)",
+          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        },
       }}
     >
       <Box display="flex" justifyContent="space-between" alignItems="start">

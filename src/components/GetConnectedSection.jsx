@@ -26,7 +26,6 @@ function GetConnectedSection() {
         mx: "auto",
         overflow: "hidden",
         px: 2,
-        pb: 10,
       }}
     >
       <Box
@@ -65,18 +64,18 @@ function GetConnectedSection() {
           position: "absolute",
           width: 80,
           height: 80,
-          bottom: 120,
-          left: 130,
+          bottom: { xs: 650, sm: 500, md: 50 },
+          left: { xs: 0, sm: 200, md: 130 },
           borderRadius: "50%",
-          backgroundColor: "#26D080", // lime green
+          backgroundColor: "#26D080",
           boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
         }}
       />
       <Star
         style={{
           position: "absolute",
-          top: 150,
-          left: 120,
+          top: 210,
+          left: 60,
           width: 100,
           transform: "rotate(-10deg)",
           color: "#FF5722",
@@ -84,30 +83,35 @@ function GetConnectedSection() {
       />
       <Box
         sx={{
-          px: { xs: 2, md: 15 },
-          py: 5,
+          px: { xs: 2, md: 8 },
+          py: { xs: 5, md: 10 },
           display: "flex",
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
-          gap: 1,
+          gap: { xs: 4, md: 8 },
           position: "relative",
           overflow: "visible",
         }}
       >
         {/* LEFT SIDE */}
-        <Box sx={{ position: "relative", width: 500 }}>
+        <Box
+          sx={{
+            position: "relative",
+            width: { xs: "100%", sm: "100%", md: 500 },
+            mb: { xs: 6, md: 0 },
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           {/* Vertical background card */}
           <Box
             sx={{
-              position: "absolute",
-              width: 300,
+              width: { xs: "90%", sm: 300 },
+              px: { xs: 2, sm: 3 },
+              py: 4,
               bgcolor: "#fff",
               borderRadius: 4,
-              left: "50%",
-              transform: "translateX(-50%)",
-              p: 3,
               boxShadow: "25px 25px 50px rgba(0,0,0,0.2)",
-              zIndex: 1,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -177,7 +181,7 @@ function GetConnectedSection() {
                 display: "flex",
                 justifyContent: "center",
                 gap: 1,
-                width: 450,
+                width: { xs: 350, md: 450 },
               }}
             >
               {/* Morocco Card */}
@@ -283,7 +287,12 @@ function GetConnectedSection() {
         </Box>
 
         {/* RIGHT SIDE */}
-        <Box sx={{ maxWidth: 400 }}>
+        <Box
+          sx={{
+            maxWidth: { xs: "100%", md: 400 },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
           <Typography
             sx={{ color: "gray", letterSpacing: 1.5, fontWeight: "bold" }}
           >
@@ -302,13 +311,22 @@ function GetConnectedSection() {
               color: "#08012E",
               maxWidth: "250px",
               fontWeight: "500",
+              mx: { xs: "auto", md: 0 },
             }}
           >
             Your ultimate travel companion. <br />
             Carries all the information you need while travelling.
           </Typography>
 
-          <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 2,
+              justifyContent: { xs: "center", md: "flex-start" },
+              flexWrap: "wrap",
+              mt: 3,
+            }}
+          >
             <Box
               component="img"
               src={googlePlay}

@@ -39,8 +39,8 @@ function TrustSection() {
         alt="car"
         sx={{
           position: "absolute",
-          top: 210,
-          left: "65%",
+          top: { xs: 175, md: 210 },
+          left: { xs: "75%", md: "65%" },
           width: 40,
           zIndex: 1,
         }}

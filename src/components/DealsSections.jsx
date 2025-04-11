@@ -15,8 +15,8 @@ function DealsSections() {
         maxWidth: "1280px",
         mx: "auto",
         overflow: "hidden",
-        pt: 15,
-        pb: 15,
+        pt: { xs: 10, md: 15 },
+        pb: { xs: 10, md: 15 },
       }}
     >
       <Box
@@ -24,21 +24,19 @@ function DealsSections() {
           bgcolor: "#0a1f7e",
           color: "white",
           borderRadius: 4,
-          py: 6,
+          py: { xs: 6, md: 6 },
           px: { xs: 3, md: 6 },
           position: "relative",
-          overflow: "visible",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-          flexDirection: { xs: "column", md: "row" },
-          gap: 4,
           zIndex: 1,
           backgroundImage: `url(${worldMap})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "contain",
           backgroundBlendMode: "lighten",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: { xs: "flex-start", md: "center" },
+          justifyContent: "space-between",
         }}
       >
         {/* ticket and heading */}
@@ -47,11 +45,12 @@ function DealsSections() {
           src={ticket}
           alt="ticket"
           sx={{
-            height: 300,
-            mb: 2,
+            height: { xs: 150, sm: 200, md: 300 },
             position: "absolute",
-            right: "88%",
-            bottom: -50,
+            right: { xs: "auto", md: "88%" },
+            left: { xs: -100, md: "auto" },
+            bottom: { xs: 380, md: -40 },
+            zIndex: 1,
           }}
         />
         <Box
@@ -59,11 +58,12 @@ function DealsSections() {
           src={plane}
           alt="plane"
           sx={{
-            height: 50,
-            mb: 2,
+            height: { xs: 20, sm: 40, md: 50 },
             position: "absolute",
-            right: "86%",
-            top: 30,
+            right: { xs: "auto", md: "86%" },
+            left: { xs: "15%", sm: "23%", md: "auto" },
+            top: { xs: 80, sm: 30 },
+            zIndex: 2,
           }}
         />
         <Box
@@ -71,12 +71,12 @@ function DealsSections() {
           viewBox="0 0 150 80"
           sx={{
             position: "absolute",
-            top: 50,
-            left: 30,
-            width: 150,
+            top: { xs: 70, sm: 50 },
+            left: { xs: 10, sm: 30 },
+            width: { xs: 70, sm: 150 },
             height: 80,
             zIndex: -1,
-            transform: "rotate(-10deg)",
+            transform: { xs: "rotate(-19deg)", sm: "rotate(-10deg)" },
           }}
         >
           <path
@@ -89,7 +89,7 @@ function DealsSections() {
           />
         </Box>
 
-        <Box sx={{ flex: 1, ml: 20 }}>
+        <Box sx={{ ml: { md: 20 }, mx: "auto" }}>
           <Button
             size="large"
             variant="contained"
@@ -119,7 +119,14 @@ function DealsSections() {
           >
             Get Tickets
           </Button>
-          <Typography variant="h3" sx={{ mb: 2 }}>
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" },
+              mb: { xs: 0, md: 2 },
+              textAlign: { xs: "center", md: "left" },
+            }}
+          >
             Find the <br /> best{" "}
             <span style={{ color: "#fff", fontWeight: "bold" }}>deals</span>
           </Typography>
@@ -131,11 +138,13 @@ function DealsSections() {
           src={redPlane}
           alt="Plane"
           sx={{
-            width: { xs: 250, md: 700 },
+            width: { xs: 300, sm: 300, md: 450, lg: 700 },
             transform: "rotate(-25deg)",
             zIndex: 2,
-            position: "absolute",
-            right: 150,
+            position: { xs: "static", md: "absolute" },
+            right: { xs: 0, md: 150 },
+            bottom: { xs: 20, md: "auto" },
+            mx: "auto",
           }}
         />
 
@@ -143,14 +152,22 @@ function DealsSections() {
         <Box
           sx={{
             flex: 1,
-            textAlign: "right",
-            position: "absolute",
-            top: 30,
-            right: 70,
+            textAlign: { xs: "center", md: "right" },
+            position: { xs: "static", md: "absolute" },
+            top: { xs: 20, md: 30 },
+            right: { xs: 20, md: 70 },
             zIndex: 3,
+            mx: { xs: "auto", sm: 0 },
           }}
         >
-          <Typography fontWeight={600} fontSize={20} sx={{ mb: 1 }}>
+          <Typography
+            fontWeight={600}
+            fontSize={20}
+            sx={{
+              mb: 1,
+              display: { xs: "block", sm: "block" },
+            }}
+          >
             Sponsored by -
           </Typography>
           <Typography
@@ -172,12 +189,12 @@ function DealsSections() {
             src={suitCase}
             alt="suitcase"
             sx={{
-              width: 250,
-              mt: 2,
-              position: "absolute",
-              right: -60,
-              top: 60,
-              clipPath: "inset(0px 0px 71px 0px)",
+              width: { xs: 200, sm: 300, md: 250 },
+              display: { xs: "none", sm: "block" },
+              position: { xs: "static", sm: "absolute" },
+              right: { xs: -10, sm: -10, md: -60 },
+              top: { xs: 300, sm: 397, md: 60 },
+              clipPath: "inset(0px 0px 79px 0px)",
             }}
           />
         </Box>

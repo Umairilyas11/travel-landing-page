@@ -63,25 +63,22 @@ function TestimonialSection() {
         maxWidth: "1280px",
         mx: "auto",
         overflow: "hidden",
+        px: { xs: 2, md: 6 },
+        py: { xs: 6, md: 10 },
       }}
     >
       <Box
         sx={{
           bgcolor: "#FCF9FE",
-          py: 10,
-          px: 15,
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, md: 8 },
           borderRadius: "30px",
-          maxWidth: "1280px",
-          mx: "auto",
-          display: "flex",
-          flexDirection: "column",
-          gap: 6,
         }}
       >
         {/* Top Content */}
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "block", sm: "flex" },
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
@@ -92,7 +89,7 @@ function TestimonialSection() {
           <Box
             sx={{
               position: "relative",
-              width: 350,
+              width: { xs: "100%", sm: 300, md: 350 },
               height: 350,
               mx: "auto",
             }}
@@ -237,12 +234,12 @@ function TestimonialSection() {
           <Box flex={1}>
             <Box
               sx={{
-                width: 50,
-                height: 50,
+                width: { xs: 30, md: 50 },
+                height: { xs: 30, md: 50 },
                 borderRadius: "50%",
                 position: "absolute",
-                left: "90%",
-                top: 100,
+                left: { xs: "80%", sm: "90%" },
+                top: { xs: 420, md: 160 },
                 bgcolor: "white",
                 display: "flex",
                 justifyContent: "center",
@@ -250,40 +247,56 @@ function TestimonialSection() {
               }}
             >
               <Typography
-                variant="h2"
                 fontFamily="revert"
-                sx={{ color: "#0A0433" }}
+                sx={{
+                  color: "#0A0433",
+                  fontSize: { xs: "2rem", md: "3rem" },
+                }}
               >
                 &rdquo;
               </Typography>
             </Box>
-            <Typography
-              fontSize={27}
-              fontWeight="bold"
-              mb={2}
-              pl={10}
-              color="#0A0433"
-            >
-              Their service is absolutely wonderful and cheaper than the hotel
-              direct or any other booking site. You got back to us strait away
-              and no issues at all in the other end.
-            </Typography>
+            <Box sx={{ px: { xs: 2, md: 10 } }}>
+              <Typography
+                fontSize={{ xs: 18, sm: 20, md: 27 }}
+                fontWeight="bold"
+                color="#0A0433"
+                textAlign={{ xs: "center", md: "left" }}
+              >
+                Their service is absolutely wonderful and cheaper than the hotel
+                direct or any other booking site. You got back to us strait away
+                and no issues at all in the other end.
+              </Typography>
+            </Box>
             <Box
               mt={3}
               display="flex"
               alignItems="center"
-              gap={3}
               justifyContent="center"
+              sx={{
+                gap: { xs: 1, md: 3 },
+              }}
             >
               {[avatar1, avatar2, avatar3, avatar4, avatar5].map((src, idx) => (
-                <Avatar key={idx} src={src} sx={{ width: 60, height: 60 }} />
+                <Avatar
+                  key={idx}
+                  src={src}
+                  sx={{
+                    width: { xs: 30, sm: 45, md: 60 },
+                    height: { xs: 30, sm: 45, md: 60 },
+                  }}
+                />
               ))}
               <IconButton
                 sx={{
                   border: "2px solid #0a0a23",
                   ml: 1,
-                  width: 60,
-                  height: 60,
+                  width: { xs: 30, sm: 45, md: 60 },
+                  height: { xs: 30, sm: 45, md: 60 },
+                  transition: "all 0.5s ease",
+                  "&:hover": {
+                    bgcolor: "#FF5722",
+                  },
                 }}
               >
                 <ArrowForwardIcon />
@@ -299,6 +312,8 @@ function TestimonialSection() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "center",
           gap: 6,
           mt: 6,
         }}
@@ -311,6 +326,7 @@ function TestimonialSection() {
             alt={company.name}
             sx={{
               height: 40,
+              maxWidth: 120,
               filter: "grayscale(100%) brightness(0.5)",
               opacity: 0.8,
               transition: "0.3s",
@@ -327,8 +343,6 @@ function TestimonialSection() {
           mt: 4,
           height: "2px",
           backgroundColor: "#e5e7eb",
-
-          mx: "auto",
         }}
       />
     </Box>

@@ -53,8 +53,13 @@ function Footer() {
               in adventure
             </Typography>
           </Grid>
-          <Grid>
-            <Box display="flex" gap={2}>
+          <Grid item xs={12} md={4}>
+            <Box
+              display="flex"
+              justifyContent="center"
+              gap={2}
+              mb={{ xs: 3, sm: 0 }}
+            >
               {[
                 <SportsBasketballIcon />,
                 <YouTubeIcon />,
@@ -86,10 +91,25 @@ function Footer() {
               bgcolor: "#3b2dd1",
             }}
           />
-          <Grid item xs={12} md={6} display="flex">
-            <Typography fontWeight={600} mb={1}>
-              Join our <br /> Newsletter
-            </Typography>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            display="flex"
+            flexDirection={{ xs: "column", sm: "row" }}
+            justifyContent="center"
+            alignItems="center"
+            gap={{ xs: 0, sm: 5 }}
+          >
+            <Box display="flex" alignItems="center" gap={2}>
+              <Typography
+                fontWeight={600}
+                textAlign={{ xs: "center", sm: "left" }}
+                pb={{ xs: 2, sm: 0 }}
+              >
+                Join our <br /> Newsletter
+              </Typography>
+            </Box>
             <Box
               sx={{
                 display: "flex",
@@ -98,9 +118,8 @@ function Footer() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 overflow: "hidden",
                 maxWidth: 300,
-                backgroundColor: "transparent", // since the bg is same as parent
+                backgroundColor: "transparent",
                 backdropFilter: "blur(4px)",
-                ml: 5,
               }}
             >
               <InputBase
@@ -144,7 +163,15 @@ function Footer() {
         <Divider sx={{ bgcolor: "#3b2dd1", mb: 4 }} />
 
         {/* Bottom Row */}
-        <Grid container spacing={4} justifyContent="space-around">
+        <Grid
+          container
+          spacing={4}
+          justifyContent="space-around"
+          sx={{
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: "center",
+          }}
+        >
           <Grid item xs={12} md={3}>
             {/* Brand logo and map */}
             <Box
@@ -284,7 +311,15 @@ function Footer() {
         <Divider sx={{ bgcolor: "#3b2dd1", mt: 4, mb: 2 }} />
 
         {/* Footer Bottom Bar */}
-        <Box display="flex" justifyContent="space-between" flexWrap="wrap">
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          flexWrap="wrap"
+          flexDirection={{ xs: "column", sm: "row" }}
+          alignItems={{ xs: "center", sm: "flex-start" }}
+          textAlign={{ xs: "center", sm: "left" }}
+          gap={2}
+        >
           <Typography variant="body2">
             © 2023 <strong>Rylic Studio</strong> | All Rights Reserved
           </Typography>
@@ -294,14 +329,16 @@ function Footer() {
               sx={{
                 fill: "#fff",
               }}
+              cursor="pointer"
             />
             <PayPalLogo
               height={20}
               sx={{
                 fill: "#fff",
               }}
+              cursor="pointer"
             />
-            <WooLogo height={20} />
+            <WooLogo height={20} cursor="pointer" />
           </Box>
         </Box>
       </Box>

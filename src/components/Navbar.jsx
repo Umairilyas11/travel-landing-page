@@ -59,16 +59,14 @@ const Navbar = () => {
                 display: "flex",
                 alignItems: "center",
                 bgcolor: "#f5f5f5",
-                px: 2,
                 py: 0.5,
                 borderRadius: 2,
                 minWidth: { xs: "100%", md: 150 },
                 flex: 1,
                 boxShadow: "0px 1px 3px rgba(0,0,0,0.05)",
               }}
-              gap={2}
             >
-              <SearchIcon sx={{ color: "orangered" }} />
+              <SearchIcon sx={{ color: "orangered", px: 2 }} />
               <InputBase
                 placeholder="Search destinations.."
                 fullWidth

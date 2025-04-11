@@ -194,8 +194,8 @@ function TestimonialSection() {
                 <Box
                   sx={{
                     position: "absolute",
-                    top: 250,
-                    left: 270,
+                    top: { xs: 270, md: 250 },
+                    left: { xs: 190, md: 270 },
                     bgcolor: "white",
                     px: 1,
                     py: 0.2,
